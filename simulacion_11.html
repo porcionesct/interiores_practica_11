@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 11. Cruzamiento con fase y neutro en C1. Simulación</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Instalaciones eléctricas interiores</h1>
+        <p>Práctica 11. Cruzamiento con fase y neutro en C1. Simulación</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Práctica 11 (Cruzamiento F-N)</a></li>
+            <li><a href="rubrica_11.html">Rúbrica evaluación</a></li>
+            <li><a href="esquema_11.html">Esquema y montaje</a></li>
+            <li class="active"><a href="simulacion_11.html">Simulación</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="glosario.html">Glosario</a></li>
+            <li><a href="prl.html">Seguridad y PRL</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h2>11.- Cruzamiento con fase y neutro en C1: simulación</h2>
+
+        <div class="section">
+            <h3 class="section-header">1. Prueba interactiva del funcionamiento</h3>
+            <p>Este modelo ilustra la lógica de esta variante. La fase (amarillo) y el neutro (azul) recorren los conductores; la lámpara, conectada entre los comunes de C1 y C2, luce cuando uno entrega fase y el otro neutro. Acciona C1, Cc o C2 en cualquier orden. No sustituye a la simulación con un programa técnico.</p>
+            <div class="simboard">
+                <svg viewBox="0 0 420 220" role="img" aria-label="Modelo interactivo del cruzamiento con fase y neutro en C1">
+                    <text x="8" y="134" fill="#fbbf24" font-size="11" font-weight="bold">F</text>
+                    <text x="8" y="194" fill="#7dd3fc" font-size="11" font-weight="bold">N</text>
+                    <path d="M20 130 H170" stroke="#fbbf24" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <path d="M20 190 H170" stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <circle cx="100" cy="130" r="4" fill="#fbbf24"/><circle cx="100" cy="190" r="4" fill="#7dd3fc"/>
+                    <circle cx="60" cy="160" r="5" fill="#86efac"/>
+                    <path id="w1" d="M60 160 L96 132" stroke="#86efac" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <rect x="165" y="115" width="70" height="90" rx="6" fill="none" stroke="#f9a8d4" stroke-width="1.5" stroke-dasharray="4 3"/>
+                    <circle cx="170" cy="130" r="4" fill="#f9a8d4"/><circle cx="170" cy="190" r="4" fill="#f9a8d4"/>
+                    <circle cx="230" cy="130" r="4" fill="#f9a8d4"/><circle cx="230" cy="190" r="4" fill="#f9a8d4"/>
+                    <path id="x1" d="M170 130 L230 130" stroke="#fbbf24" stroke-width="3" fill="none"/>
+                    <path id="x2" d="M170 190 L230 190" stroke="#7dd3fc" stroke-width="3" fill="none"/>
+                    <path id="c" d="M230 130 H320" stroke="#fbbf24" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <path id="d" d="M230 190 H320" stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <circle cx="320" cy="130" r="4" fill="#f9a8d4"/><circle cx="320" cy="190" r="4" fill="#f9a8d4"/>
+                    <circle cx="360" cy="160" r="5" fill="#86efac"/>
+                    <path id="w2" d="M360 160 L324 132" stroke="#86efac" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <path id="r1" d="M60 160 H35 V60 H188" stroke="#86efac" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path id="r2" d="M232 60 H395 V160 H360" stroke="#86efac" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle id="lamp" cx="210" cy="60" r="20" fill="#334e68" stroke="#b3c7d5" stroke-width="2"/>
+                    <path d="M196 46 L224 74 M224 46 L196 74" stroke="#8ba4b5" stroke-width="2"/>
+                    <text x="210" y="30" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="700">L</text>
+                    <text x="60" y="182" text-anchor="middle" fill="#e2e8f0" font-size="10" dx="-22">C1</text>
+                    <text x="200" y="216" text-anchor="middle" fill="#f9a8d4" font-size="10">Cc</text>
+                    <text x="360" y="182" text-anchor="middle" fill="#e2e8f0" font-size="10" dx="22">C2</text>
+                </svg>
+                <div id="simstate" style="font-weight:bold;margin:8px"></div>
+                <div id="simwarn" style="font-size:0.9em;margin-bottom:8px;color:#fde68a;min-height:1.2em"></div>
+                <button id="b1">Accionar C1</button>
+                <button id="bc">Accionar Cc</button>
+                <button id="b2">Accionar C2</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">2. Realiza la simulación técnica</h3>
+            <p>Abre el simulador disponible en el aula de informática, reproduce el esquema y demuestra el funcionamiento del circuito.</p>
+            <ol>
+                <li>Selecciona la fuente de 230 V / 50 Hz, dos conmutadores, un conmutador de cruce y una lámpara. (En Falstad, el cruce puede representarse con un conmutador doble DPDT cableado en cruz.)</li>
+                <li>Conecta la fase a la salida 1 y el neutro a la salida 2 de C1, y llévalos también a las entradas del cruce.</li>
+                <li>Conecta las salidas del cruce a las salidas de C2, y la lámpara entre el común de C1 y el común de C2.</li>
+                <li>Prueba las ocho combinaciones de C1, Cc y C2, anota el estado de la lámpara y mide la tensión de cada borne de la lámpara respecto al neutro.</li>
+                <li>Guarda el archivo y graba el vídeo de la simulación explicando los resultados.</li>
+            </ol>
+            <ul class="list-indented">
+                <li><a href="https://www.falstad.com/circuit/" target="_blank" rel="noopener noreferrer">Simulador de circuitos Falstad ↗</a></li>
+                <li>CADe_SIMU (instalado en el aula de informática).</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">3. Errores frecuentes</h3>
+            <table>
+                <thead><tr><th>Error</th><th>Síntoma</th></tr></thead>
+                <tbody>
+                    <tr><td>Fase y neutro conectados a una entrada y a una salida del cruce</td><td><strong>Cortocircuito</strong> al accionar Cc. Error grave: comprobar con el polímetro antes de energizar.</td></tr>
+                    <tr><td>Fase o neutro conectados al común de C1 en lugar de a sus salidas</td><td>La lámpara no responde a C1, o se produce un cortocircuito al accionarlo.</td></tr>
+                    <tr><td>Lámpara conectada entre un común y el neutro (como en el cruzamiento convencional)</td><td>Funcionamiento irregular: la lámpara solo responde a algunos mecanismos.</td></tr>
+                    <tr><td>Manipular el portalámparas con la lámpara apagada</td><td>Riesgo de contacto: sus dos bornes pueden tener fase. Desconectar siempre la protección.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">4. Guion recomendado para los vídeos</h3>
+            <table>
+                <thead><tr><th>Vídeo 1: montaje (3–5 min)</th><th>Vídeo 2: simulación (2–4 min)</th></tr></thead>
+                <tbody>
+                    <tr><td>Presentación del reto y materiales.</td><td>Presentación del programa utilizado.</td></tr>
+                    <tr><td>Canalización: canal protectora hasta C1, Cc, C2 y L.</td><td>Explicación del esquema: recorrido de fase y neutro y lámpara entre comunes.</td></tr>
+                    <tr><td>Identificación de bornes del cruce y conductores de cada canalización.</td><td>Prueba de las ocho combinaciones.</td></tr>
+                    <tr><td>Revisión de seguridad y prueba autorizada desde los tres puntos.</td><td>Comparación con el cruzamiento convencional (práctica 10).</td></tr>
+                    <tr><td>Conclusión: funcionamiento y dificultades.</td><td>Comparación con el montaje real.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CFGM Instalaciones Eléctricas y Automáticas · Módulo 0235 Instalaciones eléctricas interiores</p>
+    </footer>
+<script>
+var p1 = 1, cruz = false, p2 = 1;
+var Y = '#fbbf24', B = '#7dd3fc';
+function draw(){
+  // Línea superior (c) lleva F en directo y N en cruzado; la inferior (d) al revés
+  var arriba = cruz ? 'N' : 'F', abajo = cruz ? 'F' : 'N';
+  var v1 = p1 === 1 ? 'F' : 'N';
+  var v2 = p2 === 1 ? arriba : abajo;
+  var on = v1 !== v2;
+  document.getElementById('w1').setAttribute('d', p1 === 1 ? 'M60 160 L96 132' : 'M60 160 L96 188');
+  document.getElementById('w2').setAttribute('d', p2 === 1 ? 'M360 160 L324 132' : 'M360 160 L324 188');
+  document.getElementById('x1').setAttribute('d', cruz ? 'M170 130 L230 190' : 'M170 130 L230 130');
+  document.getElementById('x2').setAttribute('d', cruz ? 'M170 190 L230 130' : 'M170 190 L230 190');
+  document.getElementById('c').setAttribute('stroke', arriba === 'F' ? Y : B);
+  document.getElementById('d').setAttribute('stroke', abajo === 'F' ? Y : B);
+  var c1 = v1 === 'F' ? Y : B, c2 = v2 === 'F' ? Y : B;
+  document.getElementById('w1').setAttribute('stroke', c1); document.getElementById('r1').setAttribute('stroke', c1);
+  document.getElementById('w2').setAttribute('stroke', c2); document.getElementById('r2').setAttribute('stroke', c2);
+  document.getElementById('lamp').setAttribute('fill', on ? '#fde047' : '#334e68');
+  document.getElementById('simstate').textContent =
+    'C1 → ' + (v1 === 'F' ? 'FASE' : 'NEUTRO') + ' · Cc ' + (cruz ? 'CRUZADO' : 'DIRECTO') + ' · C2 → ' + (v2 === 'F' ? 'FASE' : 'NEUTRO') + ' · LÁMPARA ' + (on ? 'ENCENDIDA' : 'APAGADA');
+  document.getElementById('simwarn').textContent = (!on && v1 === 'F')
+    ? '⚠ Lámpara apagada con los dos bornes en fase: no manipular el portalámparas sin desconectar la protección.' : '';
+}
+document.getElementById('b1').addEventListener('click', function(){ p1 = p1 === 1 ? 2 : 1; draw(); });
+document.getElementById('bc').addEventListener('click', function(){ cruz = !cruz; draw(); });
+document.getElementById('b2').addEventListener('click', function(){ p2 = p2 === 1 ? 2 : 1; draw(); });
+draw();
+</script>
+    <button type="button" class="btn-imprimir" onclick="window.print()" aria-label="Imprimir esta página">&#128424; Imprimir</button>
+</body>
+</html>

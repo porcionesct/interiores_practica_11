@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 11. Cruzamiento con fase y neutro en C1. Presupuesto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .partida-presupuesto { margin-bottom: 30px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .partida-presupuesto h3 { color: #004a99; border-bottom: 2px solid #004a99; padding-bottom: 5px; margin-top: 0; }
+        .descripcion-tecnica { font-style: italic; color: #444; margin: 10px 0; line-height: 1.5; }
+        .tabla-precios { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .tabla-precios th { background-color: #f8f9fa; text-align: left; padding: 10px; border: 1px solid #ddd; }
+        .tabla-precios td { padding: 10px; border: 1px solid #ddd; }
+        .resumen-economico { background: #004a99; color: white; padding: 25px; border-radius: 8px; margin-top: 40px; }
+        .resumen-economico h2 { margin-top: 0; border-bottom: 1px solid #fff; padding-bottom: 10px; color: #fff; }
+        .fila-resumen { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 1.1em; }
+        .total-final { font-size: 1.5em; font-weight: bold; border-top: 2px solid #fff; padding-top: 10px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Instalaciones eléctricas interiores</h1>
+        <p>Práctica 11. Cruzamiento con fase y neutro en C1. Presupuesto</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Práctica 11 (Cruzamiento F-N)</a></li>
+            <li><a href="rubrica_11.html">Rúbrica evaluación</a></li>
+            <li><a href="esquema_11.html">Esquema y montaje</a></li>
+            <li><a href="simulacion_11.html">Simulación</a></li>
+            <li class="active"><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="glosario.html">Glosario</a></li>
+            <li><a href="prl.html">Seguridad y PRL</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h2>Ejemplo de Mediciones y Partidas</h2>
+        <p>Presupuesto elaborado en Granada para la ejecución de un punto de luz de cruzamiento con fase y neutro en C1 en una instalación interior de vivienda.</p>
+
+        <div class="partida-presupuesto">
+            <h3>1. Circuito de alumbrado (C1)</h3>
+            <p class="descripcion-tecnica">Instalado con cable de cobre H07V-K de 1,5 mm² de sección nominal (fase, neutro y protección), instalado bajo canal protectora de PVC con accesorios.</p>
+            <table class="tabla-precios">
+                <tr><th>Concepto</th><th>Medición</th><th>Precio Ud.</th><th>Subtotal</th></tr>
+                <tr><td>ml. Circuito Alumbrado</td><td>1</td><td>26,98 €</td><td>26,98 €</td></tr>
+            </table>
+        </div>
+
+        <div class="partida-presupuesto">
+            <h3>2. Punto de luz de cruzamiento</h3>
+            <p class="descripcion-tecnica">Punto de luz de cruzamiento realizado con conductor de cobre H07V-K de 1,5 mm², incluyendo caja de registro, tres cajas de mecanismo, dos conmutadores, un conmutador de cruce y portalámparas, totalmente montado y conexionado. Precio orientativo: actualizar con la base de precios de referencia.</p>
+            <table class="tabla-precios">
+                <tr><th>Concepto</th><th>Medición</th><th>Precio Ud.</th><th>Subtotal</th></tr>
+                <tr><td>ud. Punto de luz de cruzamiento</td><td>1</td><td>72,40 €</td><td>72,40 €</td></tr>
+            </table>
+        </div>
+
+        <div class="resumen-economico">
+            <h2>RESUMEN DEL PRESUPUESTO</h2>
+            <div class="fila-resumen"><span>Total Ejecución Material (Suma de partidas):</span><span>99,38 €</span></div>
+            <div class="fila-resumen"><span>Beneficio Industrial (10%):</span><span>9,94 €</span></div>
+            <div class="fila-resumen"><span>IVA Aplicable (21%):</span><span>22,96 €</span></div>
+            <div class="fila-resumen total-final"><span>TOTAL PRESUPUESTO CONTRATA:</span><span>132,28 €</span></div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CFGM Instalaciones Eléctricas y Automáticas · Módulo 0235 Instalaciones eléctricas interiores</p>
+    </footer>
+
+    <button type="button" class="btn-imprimir" onclick="window.print()" aria-label="Imprimir esta página">&#128424; Imprimir</button>
+</body>
+</html>
