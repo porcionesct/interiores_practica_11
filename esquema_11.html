@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 11. Cruzamiento con fase y neutro en C1. Esquema y montaje</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Instalaciones eléctricas interiores</h1>
+        <p>Práctica 11. Cruzamiento con fase y neutro en C1. Esquema y montaje</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Práctica 11 (Cruzamiento F-N)</a></li>
+            <li><a href="rubrica_11.html">Rúbrica evaluación</a></li>
+            <li class="active"><a href="esquema_11.html">Esquema y montaje</a></li>
+            <li><a href="simulacion_11.html">Simulación</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="glosario.html">Glosario</a></li>
+            <li><a href="prl.html">Seguridad y PRL</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h2>11.- Cruzamiento con fase y neutro en C1: esquema y montaje</h2>
+
+        <div class="section">
+            <h3 class="section-header">1. Esquema eléctrico</h3>
+            <p>La <strong>fase</strong> llega a la salida 1 de C1 y el <strong>neutro</strong> a su salida 2; desde ellas continúan hacia las <strong>entradas del conmutador de cruce</strong>. Las <strong>salidas de Cc</strong> van a las salidas de C2. La lámpara L está conectada entre el <strong>común de C1</strong> y el <strong>común de C2</strong>: luce cuando uno de los comunes entrega fase y el otro neutro.</p>
+            <div class="automata-image">
+            <svg viewBox="0 0 460 260" style="width:100%;max-width:600px;background:#fff;border:1px solid #ccc;border-radius:6px" role="img" aria-label="Esquema del cruzamiento con fase y neutro en C1">
+                <text x="80" y="16" fill="#607586" font-size="10">230 V · 50 Hz</text>
+                <path d="M30 40 H120 V150" fill="none" stroke="#d97706" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <text x="14" y="44" fill="#b45309" font-size="12" font-weight="700">F</text>
+                <path d="M30 236 H120 V214" fill="none" stroke="#0284c7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <text x="14" y="240" fill="#0284c7" font-size="12" font-weight="700">N</text>
+                <circle cx="120" cy="150" r="4" fill="#d97706"/><circle cx="120" cy="214" r="4" fill="#0284c7"/>
+                <path d="M120 150 H190" fill="none" stroke-width="4" stroke="#d97706"/><path d="M120 214 H190" fill="none" stroke-width="4" stroke="#0284c7"/>
+                <circle cx="70" cy="182" r="5" fill="#16a34a"/>
+                <path d="M70 182 L116 152" stroke="#16a34a" stroke-width="3" fill="none"/>
+                <text x="58" y="210" text-anchor="middle" font-size="11" fill="#5b21b6" font-weight="700">C1</text>
+                <text x="128" y="144" font-size="9" fill="#b45309">salida 1</text><text x="128" y="230" font-size="9" fill="#0369a1">salida 2</text>
+                <rect x="185" y="135" width="70" height="95" rx="6" fill="#fdf2f8" stroke="#db2777" stroke-width="1.5" stroke-dasharray="4 3"/>
+                <circle cx="195" cy="150" r="4" fill="#db2777"/><circle cx="195" cy="214" r="4" fill="#db2777"/>
+                <circle cx="245" cy="150" r="4" fill="#db2777"/><circle cx="245" cy="214" r="4" fill="#db2777"/>
+                <path d="M195 150 L245 150 M195 214 L245 214" stroke="#db2777" stroke-width="3" fill="none"/>
+                <text x="220" y="248" text-anchor="middle" font-size="11" fill="#9d174d" font-weight="700">Cc (directo)</text>
+                <path d="M245 150 H330 M245 214 H330" fill="none" stroke="#db2777" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="330" cy="150" r="4" fill="#db2777"/><circle cx="330" cy="214" r="4" fill="#db2777"/>
+                <circle cx="380" cy="182" r="5" fill="#16a34a"/>
+                <path d="M380 182 L334 212" stroke="#16a34a" stroke-width="3" fill="none"/>
+                <text x="398" y="210" text-anchor="middle" font-size="11" fill="#5b21b6" font-weight="700">C2</text>
+                <path d="M70 182 H45 V90 H200 M240 90 H420 V182 H380" fill="none" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="220" cy="90" r="20" fill="#fff" stroke="#91a6b5" stroke-width="2"/>
+                <path d="M206 76 L234 104 M234 76 L206 104" stroke="#91a6b5" stroke-width="1.5"/>
+                <text x="220" y="64" text-anchor="middle" font-size="12" fill="#34546a" font-weight="700">L (entre comunes)</text>
+                <text x="290" y="128" text-anchor="middle" font-size="9" fill="#db2777">salidas Cc → C2</text>
+                <text x="230" y="20" text-anchor="middle" font-size="10" fill="#607586" dx="120">C1 en F · Cc directo · C2 en N → L encendida</text>
+            </svg>
+            </div>
+            <div class="aviso">La representación es didáctica y simplificada. En el montaje real se incorporarán las protecciones, canalizaciones y conductor de protección que correspondan. El conductor de protección no sustituye al neutro.</div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">2. Plano de montaje en el tablero</h3>
+            <p><strong>Plano de ejecución de la práctica.</strong> Incluye el esquema eléctrico y el esquema de montaje: caja de registro con regleta F · N · T, el portalámparas L y los mecanismos C1, Cc y C2, todos unidos con canal protectora. Haz clic sobre la imagen para ampliarla.</p>
+            <div class="automata-image">
+                <img id="myImg" class="plano-ancho" src="images_11/circuito_11.png" alt="Plano de montaje: cruzamiento con fase y neutro en C1" style="cursor: pointer;">
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">3. Distribución en el panel</h3>
+            <p>Según el plano de la práctica: la <strong>caja de registro</strong> en el centro con la regleta F · N · T; arriba a la izquierda el <strong>conmutador C1</strong> y arriba a la derecha la <strong>lámpara L</strong>; abajo a la izquierda el <strong>conmutador de cruce Cc</strong> y abajo a la derecha el <strong>conmutador C2</strong>. Todos se unen a la caja con <strong>canal protectora</strong> con un ángulo cada tramo, y todas las uniones se hacen en la caja de registro.</p>
+            <table>
+                <thead><tr><th>Canalización</th><th>Conductores</th><th>Función</th></tr></thead>
+                <tbody>
+                    <tr><td>Caja de registro → C1 (canal)</td><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#d97706"></span>Fase · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#0284c7"></span>Neutro · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#7c3aed"></span>Común C1</td><td>Fase a la salida 1 y neutro a la salida 2; el común vuelve hacia la lámpara.</td></tr>
+                    <tr><td>Caja de registro → Cc (canal)</td><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#d97706"></span>Fase · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#0284c7"></span>Neutro · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#db2777"></span>Salida c · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#db2777"></span>Salida d</td><td>F y N entran en Cc; c y d salen de Cc hacia C2.</td></tr>
+                    <tr><td>Caja de registro → C2 (canal)</td><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#db2777"></span>Salida c · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#db2777"></span>Salida d · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#7c3aed"></span>Común C2</td><td>c y d llegan a las salidas de C2; el común vuelve hacia la lámpara.</td></tr>
+                    <tr><td>Caja de registro → L (canal)</td><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#7c3aed"></span>Común C1 · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#7c3aed"></span>Común C2</td><td>La lámpara queda entre los dos comunes.</td></tr>
+                </tbody>
+            </table>
+            <p style="font-size:0.9em;color:#666">En la caja de registro: la <strong>fase</strong> (regleta F) se une con la salida 1 de C1 y una entrada de Cc; el <strong>neutro</strong> (regleta N) con la salida 2 de C1 y la otra entrada de Cc; <strong>c</strong> y <strong>d</strong> (Cc ↔ C2) y los <strong>comunes</strong> (C1 ↔ L, C2 ↔ L) en bornes independientes. Marca los conductores: fase y neutro no deben confundirse nunca. Si el portalámparas dispone de borne de tierra, se añade el conductor de protección hacia L.</p>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">4. Identificación de los bornes del conmutador de cruce</h3>
+            <p>El conmutador de cruce tiene <strong>cuatro bornes</strong> agrupados en dos pares: un par de <strong>entradas</strong> (desde C1) y un par de <strong>salidas</strong> (hacia C2). Con el polímetro en continuidad y sin tensión:</p>
+            <ol>
+                <li>En una posición de la tecla, cada borne de entrada tiene continuidad con un borne de salida (posición directa).</li>
+                <li>Al pulsar la tecla, cada entrada pasa a tener continuidad con la <strong>otra</strong> salida (posición cruzada).</li>
+                <li>Los dos bornes de un mismo par <strong>nunca</strong> tienen continuidad entre sí: así se identifican las entradas y las salidas.</li>
+            </ol>
+            <p style="font-size:0.9em;color:#666"><strong>Muy importante en este montaje:</strong> si la fase y el neutro se conectan a una entrada y a una salida del cruce, al accionarlo se produce un <strong>cortocircuito</strong>. Comprueba los pares con el polímetro antes de conectar.</p>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">5. Tabla de funcionamiento</h3>
+            <p>Posición 1 de C1 y C2 = salida a la que llega la fase por el camino directo; posición 2 = salida del neutro. Cualquier maniobra cambia el estado de la lámpara:</p>
+            <table>
+                <thead><tr><th>C1</th><th>Cc</th><th>C2</th><th>Lámpara L</th><th>Observación</th></tr></thead>
+                <tbody>
+                    <tr><td>1 (F)</td><td>Directo</td><td>1</td><td>Apagada</td><td><strong>Los dos bornes de L con fase</strong></td></tr>
+                    <tr><td>1 (F)</td><td>Directo</td><td>2</td><td>Encendida</td><td>F en C1, N en C2</td></tr>
+                    <tr><td>2 (N)</td><td>Directo</td><td>1</td><td>Encendida</td><td>N en C1, F en C2</td></tr>
+                    <tr><td>2 (N)</td><td>Directo</td><td>2</td><td>Apagada</td><td>Bornes de L sin tensión</td></tr>
+                    <tr><td>1 (F)</td><td>Cruzado</td><td>1</td><td>Encendida</td><td>F en C1, N en C2</td></tr>
+                    <tr><td>1 (F)</td><td>Cruzado</td><td>2</td><td>Apagada</td><td><strong>Los dos bornes de L con fase</strong></td></tr>
+                    <tr><td>2 (N)</td><td>Cruzado</td><td>1</td><td>Apagada</td><td>Bornes de L sin tensión</td></tr>
+                    <tr><td>2 (N)</td><td>Cruzado</td><td>2</td><td>Encendida</td><td>N en C1, F en C2</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">6. Secuencia de montaje</h3>
+            <ol>
+                <li><strong>Interpretar:</strong> localiza en el plano la caja de registro, la lámpara L y los mecanismos C1, Cc y C2, y sigue en el esquema el recorrido de la fase y del neutro.</li>
+                <li><strong>Identificar bornes:</strong> con el polímetro en continuidad y sin tensión, localiza el común de C1 y de C2 y los pares de entrada y salida del cruce.</li>
+                <li><strong>Canalizar:</strong> fija las cajas y el portalámparas; coloca la canal protectora hasta C1, Cc, C2 y L, cortando los ángulos a inglete.</li>
+                <li><strong>Montar sin tensión:</strong> pasa los conductores y realiza las uniones: fase a la salida 1 y neutro a la salida 2 de C1 y a las entradas de Cc; salidas de Cc a las salidas de C2; comunes de C1 y C2 a la lámpara. Coloca las tapas de la canal.</li>
+                <li><strong>Revisar:</strong> comprueba aprietes, aislamiento y continuidad con el polímetro, siempre con el circuito desconectado, y que entre fase y neutro <strong>nunca</strong> se mide 0 Ω en ninguna de las ocho combinaciones.</li>
+                <li><strong>Verificar:</strong> solicita la revisión del docente. Solo entonces prueba la tabla de funcionamiento desde los tres puntos y graba el vídeo.</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">7. Lista de comprobación del montaje</h3>
+            <div class="checklist">
+                <label><input type="checkbox"> He interpretado el esquema eléctrico y el de montaje antes de montar.</label>
+                <label><input type="checkbox"> He cortado la canal a inglete en los ángulos y sin rebabas.</label>
+                <label><input type="checkbox"> He fijado la canal y las cajas con linealidad.</label>
+                <label><input type="checkbox"> He identificado con el polímetro el común de C1 y C2 y los pares de bornes del cruce.</label>
+                <label><input type="checkbox"> He realizado el montaje con el circuito sin tensión.</label>
+                <label><input type="checkbox"> He conectado la fase a la salida 1 y el neutro a la salida 2 de C1.</label>
+                <label><input type="checkbox"> He llevado la fase y el neutro a las entradas del conmutador de cruce.</label>
+                <label><input type="checkbox"> He unido las salidas del conmutador de cruce con las salidas de C2.</label>
+                <label><input type="checkbox"> He conectado la lámpara entre el común de C1 y el común de C2.</label>
+                <label><input type="checkbox"> Ningún conductor queda sin aislante fuera de los bornes.</label>
+                <label><input type="checkbox"> He comprobado con el polímetro que no hay cortocircuito entre fase y neutro.</label>
+                <label><input type="checkbox"> He solicitado revisión docente antes de energizar.</label>
+                <label><input type="checkbox"> He comprobado que la lámpara cambia de estado desde los tres puntos de mando.</label>
+            </div>
+            <p id="checkcount" style="color:#666;font-size:0.9em">0 de 13 tareas completadas</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CFGM Instalaciones Eléctricas y Automáticas · Módulo 0235 Instalaciones eléctricas interiores</p>
+    </footer>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+// Ventana modal para ampliar el plano
+var modal = document.getElementById("myModal");
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){ modal.style.display = "block"; modalImg.src = this.src; captionText.innerHTML = this.alt; }
+document.getElementsByClassName("close")[0].onclick = function(){ modal.style.display = "none"; }
+window.onclick = function(event){ if (event.target == modal) { modal.style.display = "none"; } }
+
+// Lista de comprobación del montaje
+var checks = document.querySelectorAll('.checklist input');
+checks.forEach(function(c){
+  c.addEventListener('change', function(){
+    var n = document.querySelectorAll('.checklist input:checked').length;
+    document.getElementById('checkcount').textContent = n + ' de ' + checks.length + ' tareas completadas';
+  });
+});
+</script>
+    <button type="button" class="btn-imprimir" onclick="window.print()" aria-label="Imprimir esta página">&#128424; Imprimir</button>
+</body>
+</html>
